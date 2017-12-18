@@ -4,7 +4,7 @@
 
 
 ```
-$ git clone npm install wepy-cli -g
+$ git clone https://github.com/very-k/graceful-weui.git
 ```
 * Install wepy
 
@@ -12,7 +12,7 @@ $ git clone npm install wepy-cli -g
 $ npm install wepy-cli -g
 ```
 
-* Install npm packages
+* Install dependencies
 
 ```
 $ npm install
