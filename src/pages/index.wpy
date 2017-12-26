@@ -68,18 +68,12 @@
       </repeat>
     </panel>
 
-    <panel>
-      <view class="title" slot="title">测试列表</view>
-      <list></list>
-    </panel>
-
     <toast />
   </view>
 </template>
 
 <script>
   import wepy from 'wepy'
-  import List from '../components/list'
   import Panel from '@/components/panel' // alias example
   import Counter from 'counter' // alias example
   import Group from '../components/group'
@@ -93,7 +87,6 @@
       panel: Panel,
       counter1: Counter,
       counter2: Counter,
-      list: List,
       group: Group,
       toast: Toast
     }
