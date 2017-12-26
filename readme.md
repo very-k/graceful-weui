@@ -16,11 +16,9 @@ $ npm install wepy-cli -g
 
 ```
 $ npm install
-```
 
-Using Yarn:
+# Using Yarn:
 
-```
 $ yarn
 ```
 
@@ -28,11 +26,9 @@ $ yarn
 
 ```
 $ npm run dev
-```
 
-Using Yarn:
+# Using Yarn:
 
-```
 $ yarn dev
 ```
 
