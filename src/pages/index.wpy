@@ -17,11 +17,6 @@
 </style>
 <template>
   <view class="container">
-    <view class="userinfo" @tap="handleViewTap">
-      <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"/>
-      <view class="userinfo-nickname">{{ userInfo.nickName }}</view>
-    </view>
-
     <toast />
   </view>
 </template>
@@ -41,9 +36,6 @@
     }
 
     data = {
-      userInfo: {
-        nickName: '加载中...'
-      },
       count: 0
     }
 
@@ -66,10 +58,6 @@
     onLoad() {
       let self = this
       this.$parent.getUserInfo(function (userInfo) {
-        if (userInfo) {
-          self.userInfo = userInfo
-        }
-
         self.$apply()
       })
     }
