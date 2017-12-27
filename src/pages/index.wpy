@@ -22,17 +22,6 @@
       <view class="userinfo-nickname">{{ userInfo.nickName }}</view>
     </view>
 
-    <panel>
-      <view class="title" slot="title">测试数据绑定</view>
-
-      <text class="info">{{normalTitle}}</text>
-      <text class="info">{{setTimeoutTitle}}</text>
-      <text class="info">{{mixin}}</text>
-      <text class="info">{{mynum}}</text>
-      <text class="info">{{now}}</text>
-      <button @tap="plus('a')" size="mini">  +  </button>
-    </panel>
-    
     <toast />
   </view>
 </template>
@@ -52,25 +41,15 @@
     }
 
     data = {
-      mynum: 20,
       userInfo: {
         nickName: '加载中...'
       },
-      normalTitle: '原始标题',
-      setTimeoutTitle: '标题三秒后会被修改',
       count: 0
     }
 
-    computed = {
-      now () {
-        return +new Date()
-      }
-    }
+    computed = {  }
 
     methods = {
-      plus () {
-        this.mynum++
-      },
       counterEmit (...args) {
         let $event = args[args.length - 1]
         console.log(`${this.$name} receive ${$event.name} from ${$event.source.$name}`)
@@ -90,13 +69,6 @@
         if (userInfo) {
           self.userInfo = userInfo
         }
-        self.normalTitle = '标题已被修改'
-
-        self.setTimeoutTitle = '标题三秒后会被修改'
-        setTimeout(() => {
-          self.setTimeoutTitle = '到三秒了'
-          self.$apply()
-        }, 3000)
 
         self.$apply()
       })
